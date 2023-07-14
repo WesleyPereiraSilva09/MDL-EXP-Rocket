@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Open+Sans&display=swap");
+
+body {
+  margin: 0;
+  background: #2c2b3d;
+  min-height: 100vh;
+}
+.page {
+  width: 1280px;
+  height: 720px;
+  margin: auto;
+  padding-top: 72px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 107px;
+}
+nav ul {
+  font-family: "JetBrains Mono", monospace;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  text-decoration: none;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  font-weight: bold;
+}
+main {
+  display: flex;
+  justify-content: space-between;
+  gap: 82px;
+  align-items: center;
+
+  text-align: center;
+
+  width: 1092px;
+  height: 283px;
+
+  margin-bottom: 157px;
+}
+
+h1 {
+  font-family: "JetBrains Mono", monospace;
+  color: #fff;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  padding-bottom: 59px;
+}
+
+h1 span {
+  color: #00bfa6;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+section {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  color: #c2c2c2;
+}
+
+#texto_secundario span {
+  color: #c2c2c2;
+  font-weight: bold;
+}
+
+#apresentacao span {
+  color: #00bfa6;
+  font-weight: bold;
+}
+
+#line {
+  width: 560px;
+  height: 0px;
+  border: 1px solid #00bfa6;
+  margin: 0 auto 27px;
+}
+footer section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 326px;
+  color: #c2c2c2;
+}
+
+#cadeado {
+  position: fixed;
+  left: 100px;
+}
