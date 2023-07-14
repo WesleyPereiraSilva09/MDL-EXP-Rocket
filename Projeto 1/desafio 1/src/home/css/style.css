@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+body {
+  display: flex;
+  width: auto;
+  margin: 64px 0px 0px;
+  padding-top: 64px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 64px;
+  text-align: center;
+}
+#hero {
+  width: 626px;
+  height: 486px;
+}
+#hero h1 {
+  font-family: "Dosis", sans-serif;
+  color: #3f3d56;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 0px 0px 16px;
+}
+#img {
+  width: 350px;
+  height: 238px;
+}
+#destino {
+  color: #ee24ff;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  color: #828282;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  padding: 0px 0px 26px;
+}
+#lastText {
+  padding: 0px 0px 64px;
+}
+
+strong {
+  color: #3f3d56;
+  font-weight: bold;
+}
+
+a {
+  color: #3f3d56;
+}
+
+a + a {
+  margin-left: 42px;
+}
+
+#wave {
+  position: fixed;
+  bottom: -90px;
+  left: 0px;
+  right: 0px;
+  width: auto;
+  height: 176px;
+}
