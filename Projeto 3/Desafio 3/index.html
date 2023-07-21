@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>desafio 3</title>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="h1-img">
+          <h1>avalie a sua mentoria</h1>
+          <p>Chegou a hora de avaliar o seu mentor. Bora lá?</p>
+          <img src="img/estrelas.svg" alt="" />
+        </div>
+
+        <div id="top-info">
+          <span>Informações pessoais</span>
+        </div>
+      </header>
+      <form id="form">
+        <fieldset>
+          <div class="col-2">
+            <div class="input-wrapper">
+              <label for="evaluate-name"> Nome </label>
+              <input type="text" id="evaluate-name" />
+            </div>
+            <div class="input-wrapper">
+              <label for="evaluate-lastname"> sobrenome </label>
+              <input type="text" id="evaluate-lastname" />
+            </div>
+          </div>
+          <div class="input-wrapper">
+            <label for="evaluate-email"
+              >Email <span>(digite um email válido)</span></label
+            >
+            <input type="email" id="evaluate-email" required />
+          </div>
+          <div class="fieldset-wrapper">
+            <legend>Informações do mentor</legend>
+          </div>
+          <div class="input-wrapper">
+            <label for="evaluate-category">
+              Selecione quem foi o seu mentor
+            </label>
+            <select id="evaluate-category">
+              <option value="Wesley">Wesley</option>
+              <option value="Maykon">Maykon</option>
+              <option value="Gerson">Gerson</option>
+              <option value="Dalila">Dalila</option>
+            </select>
+          </div>
+          <div class="input-wrapper">
+            <label for="feedback">Feedback sobre o mentor</label>
+            <textarea id="evaluate-feedback"></textarea>
+          </div>
+          <div class="checkbox-wrapper">
+            <input type="checkbox" id="evaluate-doubt" />
+            <label for="evaluate-doubt"
+              >Todas as minhas dúvidas foram esclarecidas durante a
+              mentoria.</label
+            >
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>

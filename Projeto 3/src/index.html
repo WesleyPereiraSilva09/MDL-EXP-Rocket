@@ -17,6 +17,7 @@
           <!-- para que o legend nao fique ao lado do fieldset ao colocar flexbox no fieldset
           o mesmo deve ser envolvido por uma div para resolver esse bug -->
           <div class="fieldset-wrapper">
+            <!-- O legend serve para que seja inserido um texto solto dentro do formulario. -->
             <legend>Informações do Evento</legend>
           </div>
           <div class="input-wrapper">
@@ -46,6 +47,7 @@
           </div>
           <div class="input-wrapper">
             <label for="event-category">categoria </label>
+            <!-- select serve para gerar um lista de opções -->
             <select id="event-category">
               <option value="live">Ao vivo</option>
               <option value="podecast">Podcast</option>
@@ -99,6 +101,7 @@
         </fieldset>
       </form>
       <footer>
+        <!-- para usar o botao fora do formulario deve se usar o form para referencia a class do  botao-->
         <input type="submit" value="Salvar evento" form="form" class="button" />
       </footer>
     </div>
