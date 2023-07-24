@@ -24,11 +24,11 @@
           <div class="col-2">
             <div class="input-wrapper">
               <label for="evaluate-name"> Nome </label>
-              <input type="text" id="evaluate-name" />
+              <input type="text" id="evaluate-name" required/>
             </div>
             <div class="input-wrapper">
               <label for="evaluate-lastname"> sobrenome </label>
-              <input type="text" id="evaluate-lastname" />
+              <input type="text" id="evaluate-lastname" required/>
             </div>
           </div>
           <div class="input-wrapper">
@@ -41,10 +41,10 @@
             <legend>Informações do mentor</legend>
           </div>
           <div class="input-wrapper">
-            <label for="evaluate-category">
+            <label for="evaluate-category" >
               Selecione quem foi o seu mentor
             </label>
-            <select id="evaluate-category">
+            <select id="evaluate-category" required>
               <option value="Wesley">Wesley</option>
               <option value="Maykon">Maykon</option>
               <option value="Gerson">Gerson</option>
@@ -63,6 +63,28 @@
             >
           </div>
         </fieldset>
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <legend>Agendando próxima mentoria</legend>
+          </div>
+          <div class="col-3">
+            <div class="input-wrapper-date">
+              <label for="mentorship-date">
+                Data <span>(DD/MM/AAAA)</span>
+              </label>
+              <input type="date" id="mentorship-date" />
+            </div>
+            <div class="input-wrapper-date">
+              <label for="mentorship-begin"> Das </label>
+              <input type="time" id="mentorship-begin" />
+            </div>
+            <div class="input-wrapper-date">
+              <label for="mentorship-end"> Até </label>
+              <input type="time" id="mentorship-end" />
+            </div>
+          </div>
+        </fieldset>
+        <input type="submit" value="SALVAR" class="button" />
       </form>
     </div>
   </body>
