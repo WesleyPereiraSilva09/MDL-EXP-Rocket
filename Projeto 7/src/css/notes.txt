@@ -1,0 +1,58 @@
+codigo que faz com que haja uma animaçao
+.square{
+
+
+  animation-name: move; - tranzendo o nome da animaçao criada
+  animation-duration:1s ; - duraçao que a animaçao vai ter
+  animation-fill-mode: forwards; - onde a animçao deve acabar, nesse caso no fim da pagina
+
+}
+//codigo responsavel pela animaçao
+@keyframes move{
+
+  //froom
+  0%{
+
+  }
+
+  //to
+  100%{
+          transform: translateX(calc(100vw - 100%));
+
+  }
+}
+
+.square {
+  animation-name: move, blink;
+  animation-duration: 1s, 200ms;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  /* animation-delay: 2s; */
+  animation-timing-function: steps(10);
+}
+
+.square:hover {
+  animation-play-state: paused;
+}
+
+@keyframes move {
+  /* to */
+  100% {
+    transform: translateX(calc(100vw - 100% - 16px));
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+
+shorthand
+animation: move 1s forwards alternate infinite, blink 100ms infinite;
