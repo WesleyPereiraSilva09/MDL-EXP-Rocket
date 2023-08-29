@@ -29,19 +29,22 @@ while (options != 3) {
   2. Mostrar itens cadastrados
   3. Sair do programa`)
   );
-
-  console.log(options);
-
-  if (options == 1) {
-    let item = prompt("Digite o nome do item");
-    items.push(item);
-  } else if (options == 2) {
-    if (items.length == 0) {
-      alert("Nao tem itens cadastrados");
-    } else {
-      alert(items);
-    }
-  } else {
-    alert("flw quebrada");
+  switch (options) {
+    case 1:
+      let item = prompt("Digite o nome do item");
+      items.push(item);
+      break;
+    case 2:
+      if (items.length == 0) {
+        alert("Nao tem itens cadastrados");
+      } else {
+        alert(items);
+      }
+      break;
+    case 3:
+      alert("flw quebrada");
+      break;
+    default:
+      alert("forte abraço boa boa");
   }
 }
