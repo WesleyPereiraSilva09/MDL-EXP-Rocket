@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* deixa a fonte mais suavizada */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  /* 10 px = 1 rem */
+  font-size: 62.5%;
+
+
+  --hue:240;
+  --color-base-white: hsl(0, 0%, 100%);
+  --color-base-gray-100: hsl(0, 0%, 96%);
+  --color-base-gray-300: hsl(var(--hue), 6%, 58%);
+  --color-base-gray-500: hsl(0, 0%, 24%);
+  --color-base-gray-900: hsl(var(--hue), 6%, 13%);
+}
+
+html,
+body,
+input {
+  font-family: "Mulish", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  background: var(--color-base-white);
+  color: var(--color-base-gray-900);
+}
+
+#app {
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+  height: 100vh;
+}
+.container {
+  padding: 1.6rem 3.2rem;
+  width: min(112rem, 100%);
+  margin: 0 auto;
+}
+
+header,
+nav,
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 7.2rem;
+  font-weight: 700;
+}
+ul {
+  list-style: none;
+  font-size: 1.8rem;
+  color: var(--color-base-gray-300);
+}
+ul li.active {
+  color: var(--color-base-gray-900);
+}
+header form {
+  flex: 1;
+}
+.input-wrapper label {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+.input-wrapper input {
+  width: 100%;
+  padding: 1.6rem;
+  background-color: var(--color-base-gray-100);
+  border: 0;
+  border-radius: 1.6rem;
+  font-weight: 600;
+  opacity: 0.56;
+}
+.input-wrapper input::placeholder {
+  color: var(--color-base-gray-500);
+}
+.avatar {
+  width: 4.2rem;
+  height: 4.2rem;
+
+  object-fit: cover;
+
+  /* ao usar um quadrado o border radius deve ser de 50% para fazer um circulo perfeito,
+   caso seja necessario */
+  border-radius: 50%;
+}
+
+main {
+  background: var(--color-base-gray-100);
+
+  /* overflow-y faz com que haja rolagem de barra somente no eixo y 
+  do elemento a qual ele foi inserido */
+  overflow-y: scroll;
+}
+/* Galeria */
+main h1 {
+  font-size: 3.4rem;
+  padding-top: 1.6rem;
+}
+.gallery {
+  margin-top: 3.2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.2rem;
+}
+.item {
+  background-color: var(--color-base-white);
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+.item img {
+  width: 100%;
+  aspect-ratio: 16/9;
+
+  display: inline-block;
+  /* quando redimensionamos a janela do navegador, a proporção das imagens é preservado */
+  object-fit: cover;
+
+  /* transitio é a propriedade responsavel pelas transiçoes das imgs.
+
+    
+     transition-property: transform, filter; - falar qual propriedade vai receber a transiçao
+     transition-duration: ; - fala a duraçao dessa transiçao
+     transition-delay: 0; - insere o dalay para inicio da transiçao
+     transition-timing-function: ease-in-out; - trabalha com a escala de tempo que vai dizer
+     se deve comecar rapido, ir lento ao meio e acabar mais rapido.
+  */
+
+  /* shortcut para as propriedades acima escritas na ordem acima.
+  mesmo no shortcut eu posso trabalhar todos as propriedades de maneira individual
+  tipo o transform e filtro cada um tendo seu timing ou duraçao */
+  transition: all 400ms ease-out;
+}
+.item img:hover {
+  /* o filter é a propriedade que permite adicionar filtros a imgs e videos no site */
+  filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+  /* traz efeitos a imagem como de aumentar a escala
+   e fazer com que a mesma possa rotacionar no proprio eixo x */
+  transform: scale(1.1) rotate(-2deg);
+}
+.datails {
+  padding: 2.2rem;
+  background-color: var(--color-base-white);
+  z-index: 1;
+  position: relative;
+}
+.datails h2 {
+  font-size: 1.8rem;
+}
+
+.tags {
+  margin-top: 1.2rem;
+}
+
+.tags span {
+  padding: 0.6rem;
+  background-color: var(--color-base-gray-100);
+  border-radius: 0.4rem;
+
+  line-height: 0;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+footer {
+  text-align: center;
+}
+
+/* ANIMAÇAO */
+
+header {
+  --startY: -100%;
+  animation: move 0.2s;
+}
+
+footer {
+  --startY: 100%;
+  animation: move 0.2s;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(var(--startY));
+  }
+}
+
+.item {
+  --delay: 0.4s;
+  animation: appear 0.4 var(var(--delay)) backwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  50% {
+    scale: (1.2);
+  }
+}
