@@ -61,7 +61,7 @@ form label {
 }
 form input {
   width: 100%;
-  color: var(--input-box);
+
   border: 0.1rem solid var(--border-input-box);
   border-radius: 0.4rem;
   background: var(--input-box);
@@ -104,12 +104,18 @@ form button {
 form button:hover {
   background: var(--button-hover);
 }
+.modal-wrapper.open {
+  opacity: 1;
+  visibility: visible;
+}
 .modal-wrapper {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.7);
+
   display: grid;
   place-content: center;
+
   opacity: 0;
   visibility: hidden;
 }
