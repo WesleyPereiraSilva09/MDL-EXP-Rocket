@@ -135,6 +135,10 @@ form button:hover {
 .modal button:hover {
   transform: scale(1.1);
 }
+.alert-error .open {
+  opacity: 1;
+  visibility: visible;
+}
 .alert-error {
   position: absolute;
   top: 0;

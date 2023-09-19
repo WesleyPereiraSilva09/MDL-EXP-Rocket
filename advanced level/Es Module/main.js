@@ -1,3 +1,3 @@
-import message from "./utils"; // esta importando e ja executando o arquivo
+import { text, message } from "./utils"; // esta importando e ja executando o arquivo
 
-console.log(message);
+console.log(message, text);
