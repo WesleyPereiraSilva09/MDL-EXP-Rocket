@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
+
+  --hue: 194;
+  --bg-color: hsla(var(--hue), 5%, 7%, 1);
+  --text-color: hsla(var(--hue), 40%, 98%, 1);
+  --primary-color: hsla(var(--hue), 100%, 63%, 1);
+  --controls-bg-color: hsla(var(--hue), 0%, 14%, 1);
+}
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+
+  display: grid;
+  height: 100vh;
+  place-content: center;
+}
+#app {
+  display: grid;
+  justify-items: center;
+}
+.flex {
+  display: flex;
+}
+#timer {
+  font-size: 9.6rem;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+#controls {
+  margin-top: 1.6rem;
+  padding: 2.2rem 4rem;
+  gap: 1.6rem;
+  background-color: var(--controls-bg-color);
+  border-radius: 999rem;
+}
+button {
+  border: 0;
+  background-color: transparent;
+  color: var(--primary-color);
+
+  cursor: pointer;
+  font-size: 6.4rem;
+}
+
+.secundary {
+  color: var(--text-color);
+}
+
+.running .ph-timer,
+.music-on .ph-speaker-none,
+html:not(.running) .ph-play-circle,
+html:not(.running) .ph-stop-circle,
+html:not(.music-on) .ph-speaker-high {
+  display: none;
+}
